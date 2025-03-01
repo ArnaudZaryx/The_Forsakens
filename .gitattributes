@@ -6,3 +6,4 @@
 *.wav filter=lfs diff=lfs merge=lfs -text
 =======
 >>>>>>> bab69adf35a6b5e6eb2cb20a28f7132db704b597
+setup_Forsakens.exe filter=lfs diff=lfs merge=lfs -text
