@@ -238,13 +238,13 @@ public class BuildSystem : MonoBehaviour
 
     public void UpdateDisplayedCosts()
     {
-        // Vider les coûts à l'écran
+        // Vider les coï¿½ts ï¿½ l'ï¿½cran
         foreach (Transform child in buildSystemUIPanel)
         {
             Destroy(child.gameObject);
         }
 
-        // Ajouter les coûts de la structure à placer
+        // Ajouter les coï¿½ts de la structure ï¿½ placer
         foreach (ItemInInventory requiredRessource in currentStructure.ressourcesCost)
         {
             GameObject requiredElementGO = Instantiate(buildingRequiredElement, buildSystemUIPanel);
