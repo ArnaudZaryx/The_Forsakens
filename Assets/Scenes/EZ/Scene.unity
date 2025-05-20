@@ -23345,7 +23345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimButton: Aim
   shoulderButton: Aim Shoulder
-  crosshair: {fileID: 10914, guid: 0000000000000000f000000000000000, type: 0}
+  crosshair: {fileID: 10914, guid: 0000000000000000f000000000000000, type: 3}
   aimTurnSmoothing: 0.15
   aimPivotOffset: {x: 0.5, y: 1.2, z: 0}
   aimCamOffset: {x: 0, y: 0.5, z: -1}
