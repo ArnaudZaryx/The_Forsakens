@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-namespace MonJeu
+namespace Polytope_PlayerMovement
 {
+
     public class PlayerMovement : MonoBehaviour
     {
         public CharacterController controller;
@@ -18,7 +18,6 @@ namespace MonJeu
 
         Vector3 velocity;
         bool isGrounded;
-
         void Update()
         {
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -41,6 +40,7 @@ namespace MonJeu
             float z = Input.GetAxis("Vertical");
 
             Vector3 move = transform.right * x + transform.forward * z;
+
             controller.Move(move * speed * Time.deltaTime);
 
             if (Input.GetButtonDown("Jump") && isGrounded)
@@ -49,6 +49,7 @@ namespace MonJeu
             }
 
             velocity.y += gravity * Time.deltaTime;
+
             controller.Move(velocity * Time.deltaTime);
         }
     }
