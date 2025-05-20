@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using TMPro; 
 
 public class MainMenu : MonoBehaviour
 {
+    public TMP_Dropdown ResolutionDropdown;
+
     public Button loadGameButton;
 
     public Button clearSavedDataButton;
@@ -31,18 +34,42 @@ public class MainMenu : MonoBehaviour
 
     public static bool loadSavedData;
 
+
+    
+//    public Toggle fullScreenToggle;
+
+    Resolution[] AllResolutions;
+    bool isFullScreen;
+    int SelctedResolution;
+
+    public void PlayGame()
+    {
+        SceneManager.LoadSceneAsync(1);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     void Start()
     {
+
+
+
+
+
+
         // Initialisation du slider de volume
         audioMixer.GetFloat("Volume", out float soundValueForSlider);
         soundSlider.value = soundValueForSlider;
 
-        // Initialisation du bouton de chargement de données
+        // Initialisation du bouton de chargement de donnï¿½es
         bool saveFileExist = System.IO.File.Exists(Application.persistentDataPath + "/SavedData.json");
         loadGameButton.interactable = saveFileExist;
         clearSavedDataButton.interactable = saveFileExist;
 
-        // Init des qualités graphiques
+        // Init des qualitï¿½s graphiques
         string[] qualities = QualitySettings.names;
         qualitiesDropdown.ClearOptions();
 
@@ -63,7 +90,7 @@ public class MainMenu : MonoBehaviour
         qualitiesDropdown.value = currentQualityIndex;
         qualitiesDropdown.RefreshShownValue();
 
-        // Initialisation des différentes résolutions
+        // Initialisation des diffï¿½rentes rï¿½solutions
         Resolution[] resolutions = Screen.resolutions;
         resolutionsDropdown.ClearOptions();
 
