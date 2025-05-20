@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Sunny Days.mat.meta
 guid: 6522f30e342599e4e9dd4cc2cc03c830
+========
+guid: 7e39f36eaa8184f489809052079b751e
+>>>>>>>> 576a9e01f37e99d1bcc0cbf7ae7eec6527456bbc:Assets/Prefabs/New Material.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
